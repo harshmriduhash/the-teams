@@ -1,4 +1,4 @@
-import * as z from "zod"
+import * as z from "zod";
 
 export const gptSchema = z.object({
   email: z.string().email({
@@ -10,7 +10,7 @@ export const gptSchema = z.object({
     .refine((url) => url.includes("chat.openai.com/g/g-"), {
       message: "URL must include 'chat.openai.com/g/g-'",
     }),
-  tag: z.string().default('General'),
+  tag: z.string().default("General"),
 });
 
 export const gptSchemaBody = z.object({
@@ -23,7 +23,7 @@ export const gptSchemaBody = z.object({
     .refine((url) => url.includes("chat.openai.com/g/g-"), {
       message: "URL must include 'chat.openai.com/g/g-'",
     }),
-  tag: z.string().default('General'),
+  tag: z.string().default("General"),
   name: z.string().min(1),
   description: z.string().min(1),
   imageUrl: z.string().url(),
