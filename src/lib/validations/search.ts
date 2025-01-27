@@ -5,6 +5,6 @@ export const gptUrlSchema = z.object({
     .string()
     .url()
     .refine((url) => url.includes("chat.openai.com/g/g-"), {
-      message: "URL must include 'chat.openai.com/g/g-'",
+       message: "URL must include 'chat.openai.com/g/g-'",
     }),
 });
