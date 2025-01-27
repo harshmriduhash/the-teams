@@ -1,7 +1,7 @@
-import HeroSection from "@/components/header/hero-section"
-import SubmissionForm from "@/components/submission/submission-form"
-import { GptCollection } from "@/components/gpt/gpt-collection"
-import FAQ from "@/components/footer/faq"
+import HeroSection from "@/components/header/hero-section";
+import SubmissionForm from "@/components/submission/submission-form";
+import { GptCollection } from "@/components/gpt/gpt-collection";
+import FAQ from "@/components/footer/faq";
 
 export default function Home() {
   return (
@@ -11,5 +11,5 @@ export default function Home() {
       <GptCollection />
       <FAQ />
     </main>
-  )
+  );
 }
