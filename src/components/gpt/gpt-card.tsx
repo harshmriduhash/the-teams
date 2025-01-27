@@ -1,11 +1,6 @@
-'use client'
+"use client";
 
-import {
-  Card,
-  CardFooter,
-  Divider,
-  Link,
-} from "@nextui-org/react";
+import { Card, CardFooter, Divider, Link } from "@nextui-org/react";
 import Image from "next/image";
 import { GPT } from "@prisma/client";
 
@@ -24,7 +19,9 @@ export default function GptCard({ gpt }: GptCardProps) {
           src={gpt.imageUrl}
           width={400}
         />
-        <p className="absolute right-3 top-3 p-1 rounded-md border backdrop-blur-md bg-secondary/50">{gpt.tag}</p>
+        <p className="absolute right-3 top-3 p-1 rounded-md border backdrop-blur-md bg-secondary/50">
+          {gpt.tag}
+        </p>
         <CardFooter className="flex-col justify-between bg-secondary/30 border-white/20 text-secondary-foreground/70 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
           <h4 className="text-center font-heading text-2xl">{gpt.name}</h4>
           <Divider />
